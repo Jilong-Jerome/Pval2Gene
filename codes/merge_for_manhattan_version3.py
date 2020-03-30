@@ -39,11 +39,18 @@ if __name__ == "__main__":
                         previous_end = int(gene_end)
                         region_end = previous_end + 500000
         else:
-            regions_list.append(str(region_chr)+"\t"+str(region_start)+"\t"+str(region_end))
-            region_start = int(gene_start) - 500000
-            previous_end = int(gene_end)
-            region_end = previous_end + 500000
-            region_chr = gene_chr
+            if n == length:
+                regions_list.append(str(region_chr)+"\t"+str(region_start)+"\t"+str(region_end))
+                region_chr = gene_chr
+                region_end = int(gene_end) + 500000
+                region_start = int(gene_start) - 500000
+                regions_list.append(str(region_chr)+"\t"+str(region_start)+"\t"+str(region_end))
+            else:
+                regions_list.append(str(region_chr)+"\t"+str(region_start)+"\t"+str(region_end))
+                region_start = int(gene_start) - 500000
+                previous_end = int(gene_end)
+                region_end = previous_end + 500000
+                region_chr = gene_chr
     genes.close()
     print("Creation of gene dictionary and Highlight Regison, finished")
     regions_list = regions_list[1:]
