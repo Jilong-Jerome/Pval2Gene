@@ -23,9 +23,15 @@ qqman
 Clone this respiratory and put both GRoSS output file and gene file in the folder of **codes**  
 The branch name in GRoSS output file follows the following format: **Pval_EndNode_StartNode**  
 An example of gene list for canid genomes are given in the **demos** folder.  
+Then the pipeline can be done with a single line command as following.  
 ```
 bash Local_Man.sh -g $GRoSS_Output -b $Branch_Name -m $Gene_List
 ```
+The whole process may take some time, thus it is recommended to hang up the pipeline with "nohup" in Linux system.  
+A series of datasets will be generated during the full process, at last the file named "branch_name.png" will be the figures similar to what in shown in the example.  
+
+After analysis of several branches, you may be like to have a portable summary file for significant zones and genes overlapped in the relevant regions for all branches. This can be done with following steps:  
+Generate a ``` filename.list ```
 ## Examples
 Example of the result plot.
 ![](images/SLD_uniqe.png)
