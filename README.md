@@ -8,6 +8,10 @@ The GRoSS output includes the chi-squared statistics and the corresponding p-val
 For pinpointing the significant regions, this pipeline contains a P-value refinement process (local score process) which is introduced and realized from Fariello et.al 2017. https://onlinelibrary.wiley.com/doi/full/10.1111/mec.14141 Please cite this paper if you end up using this pipeline.
 After the local score process, genes are aligned to the significant regions (with 50kb extension on both sides) and annotated. The gene regions with a distance shorter than 500kb are merged into tracts to be highlighted.
 
+Updates for general application still on the way, which includes:
+Genome-wide gene alignment and annotation for genes in top quantiles \\
+Options for applying local score approach or not \\
+Tolerance for user-defined chromosome choice \\
 ## Preparation of Packages
 R packages:
 ggplot2
