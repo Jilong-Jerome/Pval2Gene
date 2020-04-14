@@ -20,6 +20,10 @@ RColorBrewer
 tidyverse
 qqman
 ## Usage
+Clone this respiratory and put both GRoSS output file and gene file in the folder of 'codes' 
+```
+bash Local_Man.sh -g $GRoSS_Output -b $Branch_Name -m $Gene_List
+```
 ## Examples
 Example of the result plot.
 ![](images/SLD_uniqe.png)
