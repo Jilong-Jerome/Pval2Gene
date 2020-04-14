@@ -31,7 +31,14 @@ The whole process may take some time, thus it is recommended to hang up the pipe
 A series of datasets will be generated during the full process, at last the file named "branch_name.png" will be the figures similar to what in shown in the example.  
 
 After analysis of several branches, you may be like to have a portable summary file for significant zones and genes overlapped in the relevant regions for all branches. This can be done with following steps:  
-Generate a ``` filename.list ```
+Generate a ``` filename.list ``` in tsv format, where in the 1st column are the ```.sigzone05``` files and in the 2nd column are the ```.sig.gene.sorted``` files like the example below.
+```
+Pval_Ancient_European_Dog_n4.sigzone05  Pval_Ancient_European_Dog_n4.dt.sig.gene.sorted
+Pval_Eurasian_Wolf_n3.sigzone05 Pval_Eurasian_Wolf_n3.dt.sig.gene.sorted
+Pval_european_Breed_Dog_a1.sigzone05    Pval_european_Breed_Dog_a1.dt.sig.gene.sorted
+Pval_Sled_Dog_a3.sigzone05      Pval_Sled_Dog_a3.dt.sig.gene.sorted
+Pval_South_China_Dog_a2.sigzone05       Pval_South_China_Dog_a2.dt.sig.gene.sorted
+```
 ## Examples
 Example of the result plot.
 ![](images/SLD_uniqe.png)
