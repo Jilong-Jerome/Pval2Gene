@@ -20,7 +20,9 @@ RColorBrewer
 tidyverse
 qqman
 ## Usage
-Clone this respiratory and put both GRoSS output file and gene file in the folder of 'codes' 
+Clone this respiratory and put both GRoSS output file and gene file in the folder of **codes**  
+The branch name in GRoSS output file follows the following format: **Pval_EndNode_StartNode**  
+An example of gene list for canid genomes are given in the **demos** folder.  
 ```
 bash Local_Man.sh -g $GRoSS_Output -b $Branch_Name -m $Gene_List
 ```
