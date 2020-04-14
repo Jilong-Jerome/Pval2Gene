@@ -12,6 +12,7 @@ Updates for general application still on the way, which includes:
 Genome-wide gene alignment and annotation for genes in top quantiles  
 Options for applying local score approach or not  
 Tolerance for user-defined chromosome choice  
+User defined parameter setting
 ## Preparation of Packages
 R packages:
 ggplot2
