@@ -9,6 +9,12 @@ For pinpointing the significant regions, this pipeline contains a P-value refine
 After the local score process, genes are aligned to the significant regions (with 50kb extension on both sides) and annotated. The gene regions with a distance shorter than 500kb are merged into tracts to be highlighted.
 
 ## Preparation of Packages
+R packages:
+ggplot2
+data.table
+RColorBrewer
+tidyverse
+qqman
 ## Usage
 ## Examples
 Example of the result plot.
