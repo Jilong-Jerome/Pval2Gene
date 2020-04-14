@@ -31,7 +31,7 @@ The whole process may take some time, thus it is recommended to hang up the pipe
 A series of datasets will be generated during the full process, at last the file named "branch_name.png" will be the figures similar to what in shown in the example.  
 
 After analysis of several branches, you may be like to have a portable summary file for significant zones and genes overlapped in the relevant regions for all branches. This can be done with following steps:  
-Generate a ``` filename.list ``` in tsv format, where in the 1st column are the ```.sigzone05``` files and in the 2nd column are the ```.sig.gene.sorted``` files like the example below.
+1. Generate a ``` filename.list ``` in tsv format, where in the 1st column are the ```.sigzone05``` files and in the 2nd column are the ```.sig.gene.sorted``` files like the example below.
 ```
 Pval_Ancient_European_Dog_n4.sigzone05  Pval_Ancient_European_Dog_n4.dt.sig.gene.sorted
 Pval_Eurasian_Wolf_n3.sigzone05 Pval_Eurasian_Wolf_n3.dt.sig.gene.sorted
@@ -39,6 +39,11 @@ Pval_european_Breed_Dog_a1.sigzone05    Pval_european_Breed_Dog_a1.dt.sig.gene.s
 Pval_Sled_Dog_a3.sigzone05      Pval_Sled_Dog_a3.dt.sig.gene.sorted
 Pval_South_China_Dog_a2.sigzone05       Pval_South_China_Dog_a2.dt.sig.gene.sorted
 ```
+2. Run ```summary.py``` as follwing
+``` python summary.py filename.list $output_name```
+At last the summary information will contain information as the format ```CHR START END BRANCH GENES``` wiht example below
+```16      7131403 7453254 Sled_Dog_a3     MGAM2 MGAM TAS2R38 CLEC5A PRSS37 TAS2R3 U6 TAS2R4 SSBP1 WEE2```
+
 ## Examples
 Example of the result plot.
 ![](images/SLD_uniqe.png)
