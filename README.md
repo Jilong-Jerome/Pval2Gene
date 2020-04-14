@@ -5,7 +5,7 @@ The pipeline is originally built for the post analysis of the output result from
 The GRoSS output includes the chi-squared statistics and the corresponding p-values for each branch of the admixture graph. This pipeline is applied for highlighting and gene annotation of significant candidate regions in a specific chosen branch.
 
 For pinpointing the significant regions, this pipeline contains a P-value refinement process (local score process) which is introduced and realized from Fariello et.al 2017. https://onlinelibrary.wiley.com/doi/full/10.1111/mec.14141 Please cite this paper if you end up using this pipeline.
-After the local score process, gene overlapped with the significant regions (with 50kb)
+After the local score process, genes are aligned to the significant regions (with 50kb extension on both sides) and annotated
 
 ## Preparation of Packages
 ## Usage
