@@ -41,7 +41,8 @@ Pval_South_China_Dog_a2.sigzone05       Pval_South_China_Dog_a2.dt.sig.gene.sort
 ```
 2. Run ```summary.py``` as follwing
 ``` python summary.py filename.list $output_name```
-At last the summary information will contain information as the format ```CHR START END BRANCH GENES``` wiht example below
+At last the summary information will contain information with five columns in format  of ```CHR START END BRANCH GENES```  
+For instance   
 ```16      7131403 7453254 Sled_Dog_a3     MGAM2 MGAM TAS2R38 CLEC5A PRSS37 TAS2R3 U6 TAS2R4 SSBP1 WEE2```
 
 ## Examples
