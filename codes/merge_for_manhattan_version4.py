@@ -4,6 +4,7 @@ if __name__ == "__main__":
     snps_file = sys.argv[2]
     output_file = sys.argv[3]
     EXTENSION = 500000
+    EXTEND_LABEL = 500000
     genes = open(head_genes)
     genes_dict={}
     gene_names=[]
@@ -68,7 +69,7 @@ if __name__ == "__main__":
         else:
             snp_info = snp.split("\t")
             for key in genes_dict:
-                if (snp_info[0] == key.split("\t")[0]) and (int(snp_info[1]) >= (int(key.split("\t")[1])-EXTENSION)) and (int(snp_info[1]) <= (int(key.split("\t")[2])+EXTENSION)):
+                if (snp_info[0] == key.split("\t")[0]) and (int(snp_info[1]) >= (int(key.split("\t")[1])-EXTEND_LABEL)) and (int(snp_info[1]) <= (int(key.split("\t")[2])+EXTEND_LABEL)):
                     gene_name = genes_dict[key]
                     if gene_name in gene_names:
                         gene_count[gene_name] = gene_count[gene_name] + 1
@@ -94,16 +95,19 @@ if __name__ == "__main__":
                     highlight_status = "yes"
                     break
             for key in genes_dict:
-                if (snp_info[0] == key.split("\t")[0]) and (int(snp_info[1]) >= (int(key.split("\t")[1])-EXTENSION)) and (int(snp_info[1]) <= (int(key.split("\t")[2])+EXTENSION)):
+                if (snp_info[0] == key.split("\t")[0]) and (int(snp_info[1]) >= (int(key.split("\t")[1])-EXTEND_LABEL)) and (int(snp_info[1]) <= (int(key.split("\t")[2])+EXTEND_LABEL)):
                     snp_info.append("")
                     gene_name = genes_dict[key]
                     if gene_count[gene_name] == 0:
                         annotate_status = "yes"
                         gene_count[gene_name] = gene_count[gene_name]-1
+                        file.write(snp_info[0]+"\t"+snp_info[1]+"\t"+str(snp_info[0])+"_"+str(snp_info[1])
+                       +"\t"+snp_info[2]+"\t"+highlight_status+"\t"+annotate_status+"\t"+gene_name+"\n")
                     else:
                         gene_count[gene_name] = gene_count[gene_name]-1
                         annotate_status = "no"
-            file.write(snp_info[0]+"\t"+snp_info[1]+"\t"+str(snp_info[0])+"_"+str(snp_info[1])
+            if annotate_status == "no":
+                file.write(snp_info[0]+"\t"+snp_info[1]+"\t"+str(snp_info[0])+"_"+str(snp_info[1])
                        +"\t"+snp_info[5]+"\t"+highlight_status+"\t"+annotate_status+"\t"+gene_name+"\n")
     print("merging, finished")
     file.close()
