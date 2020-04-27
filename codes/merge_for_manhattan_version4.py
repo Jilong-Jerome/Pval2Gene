@@ -68,7 +68,7 @@ if __name__ == "__main__":
         else:
             snp_info = snp.split("\t")
             for key in genes_dict:
-                if (snp_info[0] == key.split("\t")[0]) and (int(snp_info[1]) >= (int(key.split("\t")[1]-EXTENSION))) and (int(snp_info[1]) <= (int(key.split("\t")[2]+EXTENSION))):
+                if (snp_info[0] == key.split("\t")[0]) and (int(snp_info[1]) >= (int(key.split("\t")[1])-EXTENSION)) and (int(snp_info[1]) <= (int(key.split("\t")[2])+EXTENSION)):
                     gene_name = genes_dict[key]
                     if gene_name in gene_names:
                         gene_count[gene_name] = gene_count[gene_name] + 1
@@ -94,7 +94,7 @@ if __name__ == "__main__":
                     highlight_status = "yes"
                     break
             for key in genes_dict:
-                if (snp_info[0] == key.split("\t")[0]) and (int(snp_info[1]) >= (int(key.split("\t")[1]-EXTENSION))) and (int(snp_info[1]) <= (int(key.split("\t")[2]+EXTENSION))):
+                if (snp_info[0] == key.split("\t")[0]) and (int(snp_info[1]) >= (int(key.split("\t")[1])-EXTENSION)) and (int(snp_info[1]) <= (int(key.split("\t")[2])+EXTENSION)):
                     snp_info.append("")
                     gene_name = genes_dict[key]
                     if gene_count[gene_name] == 0:
